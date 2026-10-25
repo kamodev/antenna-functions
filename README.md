@@ -115,3 +115,9 @@ cargo test          # Rust unit tests for the calculations
 maturin develop     # build and install the module into the active venv
 pytest              # Python tests for the bindings
 ```
+
+## Releases
+
+Pushing a version tag (for example `git tag v0.1.0 && git push origin v0.1.0`) runs
+`.github/workflows/release.yml`. It runs the tests, builds wheels for Linux, macOS and Windows plus an
+sdist, and publishes them as a GitHub Release for that tag.
